@@ -1,0 +1,15 @@
+/* @media (max-width: 768px) {
+    .ant-layout {
+        flex-direction: column !important;
+    }
+    .ant-layout-sider {
+        position: absolute !important;
+        z-index: 50;
+        transition: all 0.3s;
+    }
+    .ant-layout-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+} */
+
