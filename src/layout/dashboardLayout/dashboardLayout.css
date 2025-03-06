@@ -1,15 +1,55 @@
-/* @media (max-width: 768px) {
-    .ant-layout {
-        flex-direction: column !important;
-    }
-    .ant-layout-sider {
-        position: absolute !important;
-        z-index: 50;
-        transition: all 0.3s;
-    }
-    .ant-layout-content {
-        width: 100% !important;
-        margin-left: 0 !important;
-    }
-} */
 
+
+.ant-menu-dark{
+    background-color: #FFFF;
+}
+.ant-layout-sider-dark{
+    background-color: #FFFF;
+}
+
+
+.ant-menu-item-active{
+    background-color: green;
+} 
+
+.ant-menu-item-selected{
+    background-color: red;
+}
+
+li.ant-menu-item.ant-menu-item-selected {
+    background-color: #043249;
+    font-family:poppins;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 20px 0px 0px 20px !important;
+    /* padding: 15px 15px 15px 15px !important; */
+}
+
+/* active content color */
+span.ant-menu-title-content {
+    color: black; 
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* active icon color */
+li.ant-menu-item.ant-menu-item-active.ant-menu-item-selected {
+    color: #FFFF;
+    border-radius: 20px 0px 0px 20px !important;
+    /* padding: 15px 15px 15px 15px !important; */
+}
+
+/* Override Title Content Color for Active Item */
+li.ant-menu-item.ant-menu-item-selected .ant-menu-title-content {
+    color: white !important;
+}
+
+
+/* Default Icon Color (Green) */
+.ant-menu-item .ant-menu-item-icon {
+    color: black!important;
+}
+/* Active Icon Color (Red) */
+li.ant-menu-item.ant-menu-item-selected .ant-menu-item-icon {
+    color: #FFFF !important;
+}

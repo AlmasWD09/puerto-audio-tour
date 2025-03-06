@@ -5,6 +5,8 @@ import DashboardLayout from "../layout/dashboardLayout/DashboardLayout";
 import CommonDashboard from "../pages/dashboard/commonDashboard/CommonDashboard";
 import Users from "../pages/dashboard/users/Users";
 import Categories from "../pages/dashboard/categories/Categories";
+import Audios from "../pages/dashboard/audios/Audios";
+import Pricing from "../pages/dashboard/pricing/Pricing";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
             {
                 path: "categories",
                 element: <Categories />,
+            },
+            {
+                path: "audios",
+                element: <Audios />,
+            },
+            {
+                path: "pricing",
+                element: <Pricing />,
             },
         ],
     },
