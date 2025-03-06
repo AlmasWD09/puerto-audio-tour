@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import DashboardLayout from "../layout/dashboardLayout/DashboardLayout";
 import CommonDashboard from "../pages/dashboard/commonDashboard/CommonDashboard";
 import Users from "../pages/dashboard/users/Users";
+import Categories from "../pages/dashboard/categories/Categories";
 
 const router = createBrowserRouter([
     {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
         element: <MainLayout />,
         children: [
             {
-                path: "/",
+                index: true,
                 element: <Home />,
             },
         ],
@@ -23,12 +24,16 @@ const router = createBrowserRouter([
         element: <DashboardLayout />,
         children: [
             {
-                path: "/admin/dashboard",
+                index: true,
                 element: <CommonDashboard />,
             },
             {
-                path: "/admin/dashboard/users",
+                path: "users",
                 element: <Users />,
+            },
+            {
+                path: "categories",
+                element: <Categories />,
             },
         ],
     },

@@ -7,12 +7,15 @@ import {
     VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Button } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
 const { Sider } = Layout;
 
 
 
 const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
+    const navigate = useNavigate(); // route change for
+    const location = useLocation(); // route change for
 
     return (
         <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -20,11 +23,12 @@ const Sidebar = () => {
             <Menu
                 theme="dark"
                 mode="inline"
-                defaultSelectedKeys={["1"]}
+                selectedKeys={[location.pathname]}
+                onClick={({ key }) => navigate(key)} 
                 items={[
-                    { key: "1", icon: <UserOutlined />, label: "Dashboard" },
-                    { key: "2", icon: <VideoCameraOutlined />, label: "Profile" },
-                    { key: "3", icon: <UploadOutlined />, label: "Settings" },
+                    { key: "/admin/dashboard", icon: <UserOutlined />, label: "Dashboard" },
+                    { key: "/admin/dashboard/users", icon: <VideoCameraOutlined />, label: "Users" },
+                    { key: "/admin/dashboard/categories", icon: <UploadOutlined />, label: "Categories" },
                 ]}
             />
             <Button
