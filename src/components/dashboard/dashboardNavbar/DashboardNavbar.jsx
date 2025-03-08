@@ -74,9 +74,7 @@ const DashboardNavbar = ({ onMenuClick, onSidebarToggle, isSidebarCollapsed }) =
             <>
               <Button
                 type="primary"
-                // loading={isUserLogoutLoading}
               >
-                {/* {isUserLogoutLoading ? "Logout..." : "Logout"} */}
               </Button>
             </>
 
