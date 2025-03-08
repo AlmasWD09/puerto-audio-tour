@@ -1,6 +1,184 @@
-/* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono;
+  }
+  p {
+    @apply font-poppins text-sm md:text-base leading-7 text-gray;
+  }
+  span {
+    @apply inline-block;
+  }
+}
+
+@layer components {
+  .custom-scrollbar {
+    scrollbar-gutter: stable;
+  }
+  .my-transition {
+    @apply transition-all duration-300 ease-linear;
+  }
+  .section-py {
+    @apply py-10 md:py-14;
+  }
+  .section-my {
+    @apply my-10 md:my-14;
+  }
+}
+
+.custom-tableslider {
+  @apply overflow-x-auto overflow-y-clip;
+}
+
+.custom-tableslider::-webkit-scrollbar {
+  height: 8px; /* height of the scrollbar */
+}
+
+.custom-tableslider::-webkit-scrollbar-track {
+  background: #dedede;
+}
+
+.custom-tableslider::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 4px; /* roundness of the thumb */
+}
+
+.custom-tableslider::-webkit-scrollbar-thumb:hover {
+  background: #5f9c42;
+}
+
+/* custom scrollbar design */
+.custom-scrollbar-popup .time-bottom-picker .ant-picker-datetime-panel {
+  @apply !h-96 custom-scrollbar;
+}
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #dedede;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 4px; /* roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1bf00;
+}
+
+.ant-collapse-header {
+  padding: 12px 0px 10px 13px !important;
+}
+.ant-collapse-content-box {
+  padding-bottom: 0 !important;
+}
+
+.ant-table-row-striped {
+  background-color: #f5faff;
+}
+
+.ql-container {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.ql-toolbar {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.ql-toolbar .ql-formats button {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ql-editor {
+  min-height: 200px !important;
+}
+
+.ant-dropdown-menu-title-content {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.ant-picker-range-arrow {
+  display: none !important;
+}
+
+.ant-picker-panels {
+  @apply !flex-col md:!flex-row;
+}
+
+.time-bottom-picker .ant-picker-time-panel {
+  @apply order-1;
+  @apply border-t;
+}
+
+.time-bottom-picker .ant-picker-datetime-panel {
+  @apply !flex !flex-col md:!flex-row  pb-4;
+}
+.time-bottom-picker .ant-picker-date-panel {
+  @apply !h-[250px] md:!h-auto overflow-y-scroll overflow-x-hidden custom-scrollbar mb-0;
+}
+.time-bottom-picker .ant-picker-time-panel {
+  @apply !h-[150px] md:!h-auto overflow-y-scroll overflow-x-hidden custom-scrollbar mb-0;
+}
+.ant-drawer .ant-drawer-body {
+  background-color: #5f9c42;
+  padding: 8px !important;
+}
+/* For Input.Password component */
+.ant-input-password input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th,
+.ant-table-wrapper .ant-table-thead > tr > td {
+  background-color: #f2f8ed;
+  transition: all 0.3s ease-in;
+}
+
+.rbc-toolbar {
+  background-color: #eef8ff !important;
+  padding: 1rem;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  margin-right: -1rem;
+  justify-content: space-between !important;
+}
+.rbc-toolbar button:focus {
+  background-color: #5f9c42 !important;
+  color: white !important;
+}
+
+.ant-modal .ant-modal-title {
+  font-size: 18px !important;
+}
+
+/* tabs */
+.ant-tabs .ant-tabs-tab-btn {
+  padding: 4px 16px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 6px;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  padding: 4px 16px !important;
+  background-color: #5f9c42 !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+}
